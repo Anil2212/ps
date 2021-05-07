@@ -1,0 +1,21 @@
+.append-div{    
+    width: 90%;
+    height: 200px;
+    border: 2px solid #262626;
+    margin: 25px auto;
+    text-align: center;
+    button {
+        display: inline-block;
+        padding: 10px 25px;
+        font-size: 1.125rem;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        outline: 0;
+        border: 2px solid #262626;
+        border-radius: 5px;
+        font-weight: 700;
+        background-color: #262626;
+        color: #fff;
+    }
+}

@@ -1,0 +1,167 @@
+$scale:0.725;
+$btnscale:1;
+
+.layout-action-header{
+    margin-top: 25px;    
+    overflow: hidden;
+    .select-box {
+        line-height: 1;
+        float: right;
+        margin: 0 5px;
+        select{
+            display: inline-block;
+            padding: 10px;
+            font-weight: 600;
+            border: 1px solid #000;
+            color: #a9a9aa;
+            border-radius: 4px;
+            outline: 0;
+        }
+    }
+}
+.layout-action-btn{
+    float: right;
+    border-radius: 4px;
+    padding: 3px 6px;
+    border: 1px solid #000;
+    line-height: 1;
+    cursor: pointer;
+    .btn-list{
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin: 0 5px;
+        div{
+            display: block;
+            border:1px solid #000;
+            height: 5px;
+            background-color: #000;
+            margin: 1px;
+        }
+   }
+   .btn-grid{
+       width: 26px;
+       height: 26px;
+       display: inline-block;
+       margin: 0 5px;
+       position: relative;
+       div{
+           position: absolute;
+           border:1px solid #000;
+           height: 11px;
+           width: 12px;
+           background-color: #000;
+           margin: 1px;
+       }
+       div:nth-child(1){
+           top: 0;
+           left: 0;
+       }
+       div:nth-child(2){
+           top: 0;
+           left: 50%;
+       }
+       div:nth-child(3){
+           top: 50%;
+           left: 0;
+       }
+       div:nth-child(4){
+           top: 50%;
+           left: 50%;
+       }
+   }
+}
+.btn-grid::after{
+    content: " ";
+    border: 1px solid;
+    height: 26px;
+    position: absolute;
+    left: -6px;
+    top: 0;
+    background-color: #000;
+}
+.layout-action-btn .btn-list.active div,.layout-action-btn .btn-grid.active div{
+    border:1px solid #a9a9a9;
+    background-color: #a9a9a9;
+}
+ul.list-item-group {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    li.list-item {
+        width: 45%;
+        margin: 15px * $scale 2.5%;
+        .item-container{
+            .item-image-box{
+                width: 50%;
+            }
+            .item-action-box{
+                width: calc(50% - 2px);
+            }
+        }
+    }
+}
+
+ul.list-item-group.grid-layout {
+    li.list-item {
+        width: 20%;
+        margin: 15px * $scale 2.5%;
+        .item-container{
+            .item-image-box{
+                width: 100%;
+            }
+            .item-action-box{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.item-container{
+    display: flex;
+    flex-wrap: wrap;
+    .item-image-box{
+        text-align: center;
+        .image{
+            display: inline-block;
+            border: 1px solid #a9a9a9;
+            width: 208px * $scale;
+            height: 279px * $scale;
+        }
+    }
+    .item-action-box{
+        line-height: 1;        
+        font-weight: 700;             
+        font-size: 24px * $scale;        
+        color: #282c3f;
+        padding: 10px * $scale;
+        .product-title, .product-name, .product-price, .add-to-cart{
+            display: block;
+            margin: 15px * $scale 10px * $scale;
+        }
+        .product-name {
+            color: #535665;
+            font-size: 20px  * $scale;
+            opacity: .8;
+            font-weight: 400;
+            height: 42px;
+        }
+        .add-to-cart{
+            font-size: 16px * $scale;
+            padding: 10px * $scale;
+            text-align: center;
+            width: calc(100% - 20px);
+            background-color: #fe414d;
+            cursor: pointer;
+            border-radius: 4px * $scale;
+            outline: 0;
+            border: 0;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+        .product-price{
+            font-size: 26px * $scale;
+        }
+    }
+}

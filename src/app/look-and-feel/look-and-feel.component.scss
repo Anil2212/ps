@@ -1,0 +1,31 @@
+.container{
+  margin: 25px 0;
+}
+.box-style{
+    width: 100%;
+    max-width: 875px;
+    border: 2px solid #282c3f;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+span.rotating-text {
+    display: inline-block;
+    position: absolute;
+    animation: rotateAnimation 10s linear infinite;
+    white-space: nowrap;
+    top: 50%;
+}
+@keyframes rotateAnimation {
+    0% {
+      right: 0%;
+      transform: translate(100%, -50%);
+    }
+    100% {
+      right: 100%;
+      transform: translate(-100%, -50%);
+    }
+}

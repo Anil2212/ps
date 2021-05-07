@@ -1,0 +1,18 @@
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let prop of tableHeader">
+                    <div class="text-transform" (click)="headerEvent(prop)">{{prop}}</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of tableData">
+                <td *ngFor="let prop of tableHeader">
+                    <span>{{data[prop]}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

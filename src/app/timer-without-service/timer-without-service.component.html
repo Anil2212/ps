@@ -1,0 +1,16 @@
+<div class="timer-app-container">
+    <div class="col">
+        <app-count-down-timer [countDownTimer]="coutTime"></app-count-down-timer>
+    </div>
+    <div class="col">
+        <app-input-timer-limit (resetEvent)="resetEventHandler()" (startPauseEvent)="startPauseEventHandler($event)"
+            (timerEvent)="timerEventHandler($event)">
+        </app-input-timer-limit>
+    </div>
+    <div class="col">
+        <app-log-timestamp [logs]="_logs"></app-log-timestamp>
+    </div>
+    <div class="col">
+        <app-log-start-pause-count [start]="startedCount" [pause]="pausedCount"></app-log-start-pause-count>
+    </div>
+</div>

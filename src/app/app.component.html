@@ -1,0 +1,27 @@
+<div class="header-component">
+    <nav>
+        <a [routerLink]="['/list-and-grid']">
+            <span>P</span>
+            <strong>S</strong>
+        </a>
+        <a [routerLinkActive]="'active'" [routerLink]="['/look-and-feel']">
+            Route 1
+        </a>
+        <a [routerLinkActive]="'active'" [routerLink]="['/list-and-grid']">
+            Route 2
+        </a>
+        <a [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/timer-without-service']">
+            Route 3
+        </a>
+        <a [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/timer-without-service/service']">
+            Route 4
+        </a>
+        <a [routerLinkActive]="'active'" [routerLink]="['/table']">
+            Route 5
+        </a>
+        <a [routerLinkActive]="'active'" [routerLink]="['/scroll-div']">
+            Route 6
+        </a>
+    </nav>
+</div>
+<router-outlet></router-outlet>

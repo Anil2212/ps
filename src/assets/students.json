@@ -1,0 +1,52 @@
+[
+    {
+        "name": "E",
+        "class": "10",
+        "section": "C",
+        "math": 74,
+        "science": 75,
+        "english": 70,
+        "hindi": 86,
+        "computer": 87
+    },
+    {
+        "name": "A",
+        "class": "10",
+        "section": "A",
+        "math": 74,
+        "science": 87,
+        "english": 75,
+        "hindi": 86,
+        "computer": 87
+    },
+    {
+        "name": "B",
+        "class": "10",
+        "section": "A",
+        "math": 74,
+        "science": 86,
+        "english": 75,
+        "hindi": 86,
+        "computer": 87
+    },
+    {
+        "name": "C",
+        "class": "10",
+        "section": "C",
+        "math": 74,
+        "science": 65,
+        "english": 75,
+        "hindi": 86,
+        "computer": 87
+    },
+    {
+        "name": "D",
+        "class": "10",
+        "section": "D",
+        "math": 74,
+        "science": 61,
+        "english": 75,
+        "hindi": 86,
+        "computer": 87
+    }
+]

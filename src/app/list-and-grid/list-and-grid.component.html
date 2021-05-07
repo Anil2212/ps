@@ -1,0 +1,49 @@
+<div class="layout-action-header">
+    <div class="layout-action-btn">          
+        <div class="btn-list" [ngClass]="{'active': layout === 'list'}" (click)="layout = 'list'">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>      
+        <div class="btn-grid" [ngClass]="{'active': layout === 'grid'}" (click)="layout = 'grid'">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>    
+    <div class="select-box">
+        <select [(ngModel)]="sortOptionModel">
+            <option value="asc">
+             <strong>LOW TO HIGH</strong>
+            </option>
+            <option value="desc">
+               <strong>PRICE : HIGH TO LOW </strong>
+            </option>
+        </select>
+   </div>
+</div>
+<div class="container">
+    <ul class="list-item-group" [ngClass]="{'grid-layout': layout === 'grid'}">
+        <ng-container *ngFor="let item of (items | sort : sortOptionModel : 'price')">
+            <li class="list-item">
+                <div class="item-container">
+                    <div class="item-image-box">
+                        <div class="image">
+    
+                        </div>
+                    </div>
+                    <div class="item-action-box">
+                        <span class="product-title">{{item?.title}}</span>
+                        <span class="product-name">{{item?.name}}</span>
+                        <span class="product-price">Price : Rs. {{item?.price}}</span>
+                        <button class="btn add-to-cart">
+                            Add To Cart
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ng-container>
+    </ul>
+</div>
