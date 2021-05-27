@@ -1,8 +1,10 @@
 ul{
     max-height: 225px;
     overflow: auto;
-}
-p{
-    margin: 10px;
-    font-weight: 700;
+    li{
+        p{
+            margin: 10px;
+            font-weight: 700;
+        }
+    }
 }

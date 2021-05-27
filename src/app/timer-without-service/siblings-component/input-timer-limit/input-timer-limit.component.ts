@@ -5,14 +5,14 @@ import { TimerService } from 'src/app/shared/service/timer.service';
   selector: 'app-input-timer-limit',
   template: `
     <div class="transfor-center">
-    <div class="input-text-con">
+     <div class="input-text-con">
         <label> Enter Time Limit</label>
         <input class="input-text-field" type="number" [disabled]="toggleState" [min]="10" [(ngModel)]="timer" (keyup)="ngModelChangeEvent()" (mouseup)="ngModelChangeEvent()" />
-    </div>
-    <div class="action-btn">
-    <button class="btn btn-primary" (click)="startPause()">{{(toggleState)? 'Pause':'Start'}}</button>
-    <button class="btn btn-primary"(click)="reset()">Reset</button>    
-    </div>
+     </div>
+     <div class="action-btn">
+      <button class="btn btn-primary" (click)="startPause()">{{(toggleState)? 'Pause':'Start'}}</button>
+      <button class="btn btn-primary"(click)="reset()">Reset</button>
+     </div>
     </div>
   `,
   styleUrls: ['./input-timer-limit.component.scss']

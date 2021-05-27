@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs/operators';
-
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { HttpService } from '../shared/service/http.service';
 
 @Component({
@@ -8,18 +7,27 @@ import { HttpService } from '../shared/service/http.service';
   templateUrl: './list-and-grid.component.html',
   styleUrls: ['./list-and-grid.component.scss']
 })
-export class ListAndGridComponent implements OnInit {
-  layout = 'list';
-  sortOptionModel = 'asc'
-  items:any = [];
+export class ListAndGridComponent implements OnInit, OnDestroy {
+  layout = true;
+  sortOptionModel = 'asc';
+  items: any = [];
+  private subscription: Subscription = new Subscription();
   constructor(
-    private _HttpService:HttpService
+    private _HttpService: HttpService
   ) { }
 
   ngOnInit(): void {
-    this._HttpService.get('assets/products.json').subscribe((response) => {
-       this.items = response;
-    })
+    this.subscription.add(
+      this._HttpService.get('assets/products.json').subscribe((response) => {
+        this.items = response;
+      }, (error) => {
+        console.log(error)
+      })
+    )
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe()
   }
 
 }

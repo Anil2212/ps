@@ -1,37 +1,37 @@
 <div class="layout-action-header">
-    <div class="layout-action-btn">          
-        <div class="btn-list" [ngClass]="{'active': layout === 'list'}" (click)="layout = 'list'">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>      
-        <div class="btn-grid" [ngClass]="{'active': layout === 'grid'}" (click)="layout = 'grid'">
+    <div class="layout-action-btn">
+        <div class="btn-list" [class.active]="layout" (click)="layout = true">
             <div></div>
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>    
+        <div class="btn-grid" [class.active]="!layout" (click)="layout = false">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <div class="select-box">
         <select [(ngModel)]="sortOptionModel">
             <option value="asc">
-             <strong>LOW TO HIGH</strong>
+                <strong>LOW TO HIGH</strong>
             </option>
             <option value="desc">
-               <strong>PRICE : HIGH TO LOW </strong>
+                <strong>PRICE : HIGH TO LOW </strong>
             </option>
         </select>
-   </div>
+    </div>
 </div>
 <div class="container">
-    <ul class="list-item-group" [ngClass]="{'grid-layout': layout === 'grid'}">
+    <ul class="list-item-group" [class.grid-layout]="!layout">
         <ng-container *ngFor="let item of (items | sort : sortOptionModel : 'price')">
             <li class="list-item">
                 <div class="item-container">
                     <div class="item-image-box">
                         <div class="image">
-    
+
                         </div>
                     </div>
                     <div class="item-action-box">

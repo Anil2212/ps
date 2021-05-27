@@ -1,0 +1,8 @@
+$primary-grey-color:#a9a9a9;
+$black-color:#000;
+$border-primary-grey:1px solid $primary-grey-color;
+
+@mixin flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}

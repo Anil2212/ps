@@ -1,31 +1,31 @@
+@import 'util';
+
 .table-container{
     max-width: 90%;
     margin: 25px auto;
+    table, td, th {
+        border: 1px solid #bebebe;
+        text-align: center;
+        padding: 12px 10px;
+      }
     table{
         width: 100%;
         border-collapse: collapse;
-    }
-    table{        
-        box-shadow: 0px 0px 8px 1px #a9a9a9;
-    }
-    table, td, th {
-      border: 1px solid #bebebe;
-      text-align: center;
-      padding: 12px 10px;
-    } 
-    thead{
-        box-shadow: 0px 4px 3px -2px #a9a9a9;
-    }
-    th{
-        background-color: #262626;
-        color: #fff;
-        cursor: pointer;
-        .text-transform{
-            text-transform: capitalize;
-            font-size: 0.85rem;
+        box-shadow: 0px 0px 8px 1px $primary-grey-color;
+        thead{
+            box-shadow: 0px 4px 3px -2px $primary-grey-color;
+            th{
+                background-color: #262626;
+                color: #fff;
+                cursor: pointer;
+                .text-transform{
+                    text-transform: capitalize;
+                    font-size: 0.85rem;
+                }
+            }
         }
-    }
-    td{
-        font-size: 0.95rem;
+        td{
+            font-size: 0.95rem;
+        }
     }
 }

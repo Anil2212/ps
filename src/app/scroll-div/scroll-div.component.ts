@@ -6,7 +6,7 @@ import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
   styleUrls: ['./scroll-div.component.scss']
 })
 export class ScrollDivComponent implements OnInit, AfterViewInit {
-  divs = [0, 1, 2, 3, 4, 5]
+  divs: Array<number> = [0, 1, 2, 3, 4, 5]
   constructor(
     private _ElementRef: ElementRef
   ) { }
@@ -34,7 +34,7 @@ export class ScrollDivComponent implements OnInit, AfterViewInit {
     }
   }
 
-  clickHandler(div: any) {
-    alert(`Button  in ${div}th div clicked`)
+  clickHandler(divNumber: number) {
+    alert(`Button  in ${divNumber}th div clicked`)
   }
 }

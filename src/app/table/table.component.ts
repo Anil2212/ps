@@ -21,9 +21,9 @@ export class TableComponent implements OnInit {
       this._tableData = [...response];
       this.tableData = response;
       this.tableHeader = [];
-      for (let prop in response[0]) {
-        this.tableHeader.push(prop);
-      }
+      try {
+        this.tableHeader = Object.keys(response[0])
+      } catch (e) { }
       this.key = this.tableHeader[0]
     })
   }
@@ -51,14 +51,12 @@ export class TableComponent implements OnInit {
     } else {
       let __tableData = [... this._tableData]
       this.tableData = __tableData.sort((a: any, b: any) => {
-        if(typeof a[this.key] === 'string' || typeof b[this.key] === 'string'){
+        if (typeof a[this.key] === 'string' || typeof b[this.key] === 'string') {
           return this.order === 'asc' ? (a[this.key].localeCompare(b[this.key])) : (b[this.key].localeCompare(a[this.key]))
-        }else{
+        } else {
           return this.order === 'asc' ? (a[this.key] - b[this.key]) : (b[this.key] - a[this.key]);
         }
-        
       })
     }
   }
-
 }

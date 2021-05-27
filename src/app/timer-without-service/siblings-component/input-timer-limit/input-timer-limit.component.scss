@@ -2,29 +2,28 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-}
-.input-text-con{
-    text-align: center;
-    label {
-        display: inline-block;
-        margin: 10px;
-        vertical-align: middle;
-        font-weight: 900;
-        font-size: 19px;
-    }
-    .input-text-field{
-        display: inline-block;
-        vertical-align: middle;
-        padding: 10px;
-        margin: 10px;
-        border: 2px solid #a9a9a9;
-        border-radius: 5px;
-        outline: 0;        
-        max-width: 115px;
-        text-align: center;
-    }
-}
-.action-btn{
+  .input-text-con{
+      text-align: center;
+      label {
+          display: inline-block;
+          margin: 10px;
+          vertical-align: middle;
+          font-weight: 900;
+          font-size: 19px;
+      }
+      .input-text-field{
+          display: inline-block;
+          vertical-align: middle;
+          padding: 10px;
+          margin: 10px;
+          border: 2px solid #a9a9a9;
+          border-radius: 5px;
+          outline: 0;
+          max-width: 115px;
+          text-align: center;
+      }
+  }
+  .action-btn{
     text-align: center;
     .btn.btn-primary{
         display: inline-block;
@@ -41,5 +40,6 @@
         font-weight: 700;
         margin: 10px;
     }
+ }
 }
 
